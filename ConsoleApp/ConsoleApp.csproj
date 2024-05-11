@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ChainOfResponsabilityLibrary\ChainOfResponsabilityLibrary.csproj" />
+      <ProjectReference Include="..\ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj" />
       <ProjectReference Include="..\MediatorLibrary\MediatorLibrary.csproj" />
       <ProjectReference Include="..\MementoLibrary\MementoLibrary.csproj" />
       <ProjectReference Include="..\ObserverLibrary\ObserverLibrary.csproj" />

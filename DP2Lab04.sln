@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsabilityLibrary", "ChainOfResponsabilityLibrary\ChainOfResponsabilityLibrary.csproj", "{F2540365-21FD-450A-9E69-6328F213B641}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityLibrary", "ChainOfResponsibilityLibrary\ChainOfResponsibilityLibrary.csproj", "{F2540365-21FD-450A-9E69-6328F213B641}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorLibrary", "MediatorLibrary\MediatorLibrary.csproj", "{E3212FC7-3A0F-4457-B6BA-A27C761244B2}"
 EndProject

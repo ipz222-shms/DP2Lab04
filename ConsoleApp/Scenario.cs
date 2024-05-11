@@ -2,7 +2,7 @@
 
 public enum Scenario
 {
-    ChainOfResponsability,
+    ChainOfResponsibility,
     Mediator,
     Observer,
     Strategy,

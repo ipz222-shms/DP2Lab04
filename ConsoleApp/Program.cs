@@ -1,4 +1,9 @@
-﻿using ConsoleApp;
+﻿using ChainOfResponsibilityLibrary;
+using MediatorLibrary;
+using MementoLibrary;
+using ObserverLibrary;
+using StrategyLibrary;
+using ConsoleApp;
 
 while (true)
 {
@@ -30,7 +35,18 @@ while (true)
 
     switch ((Scenario)selectedScenario)
     {
-        case Scenario.ChainOfResponsability:
+        case Scenario.ChainOfResponsibility:
+            Console.WriteLine("Welcome to the support!" +
+                              "\n\nPlease, select a category which best represents your question:" +
+                              "\n\t1 - Account\n\t2 - Orders\n\t3 - Refund\n\t4 - Other");
+
+            var supportHandler = new AccountSupport();
+            supportHandler.SetNextHandler(new OrdersSupport())
+                .SetNextHandler(new RefundSupport())
+                .SetNextHandler(new OperatorSupport());
+            supportHandler.Handle(SupportInput.GetInt());
+            
+            break;
         case Scenario.Mediator:
         case Scenario.Observer:
         case Scenario.Strategy:
