@@ -73,6 +73,22 @@ while (true)
             
             break;
         case Scenario.Observer:
+            LightElementNode div = new("div");
+            LightElementNode btn = new("button");
+            div.AppendChild(btn);
+            btn.AppendChild(new LightTextNode("Submit"));
+            
+            div.OnMouseOver += (node, _) => Console.WriteLine($"{node} Mouse Over!");
+            div.OnMouseOut += (node, _) => Console.WriteLine($"{node} Mouse Out!");
+            btn.OnClick += (node, _) => Console.WriteLine($"{node} Clicked!");
+            btn.OnClick += (_, _) => Console.WriteLine("Form submitted!");
+            
+            Console.WriteLine($"{div.OuterHTML()}\n");
+            div.EmulateMouseOver();
+            btn.EmulateClick();
+            div.EmulateMouseOut();
+            
+            break;
         case Scenario.Strategy:
         case Scenario.Memento:
         default:
