@@ -9,7 +9,7 @@
 TODO:
 - [x] [Завдання 0](#user-content-завдання-0)
 - [x] [Завдання 1](#user-content-завдання-1)
-- [ ] [Завдання 2](#user-content-завдання-2)
+- [x] [Завдання 2](#user-content-завдання-2)
 - [ ] [Завдання 3](#user-content-завдання-3)
 - [ ] [Завдання 4](#user-content-завдання-4)
 - [ ] [Завдання 5](#user-content-завдання-5)
@@ -44,11 +44,11 @@ TODO:
 
 1. Відрефакторте [код](https://github.com/fantkolja/design-patterns-samples/tree/master/csharp/src/patterns/Mediator/AirTrafficControl)
    продемонстрований на лекції за допомогою використання шаблону Посередник.
-2. В результаті рефакторингу `Aircraft` не повинен “знати” про
-   `Runway` і навпаки. Обидві сутності повинні “знати” лише про
-   `CommandCentre`.
+2. В результаті рефакторингу [`Aircraft`](MediatorLibrary/Aircraft.cs) не повинен “знати” про
+   [`Runway`](MediatorLibrary/Runway.cs) і навпаки. Обидві сутності повинні “знати” лише про
+   [`CommandCentre`](MediatorLibrary/CommandCentre.cs).
 3. Покажіть правильність роботи свого коду запустивши його в
-   головному методі програми.
+   [головному методі програми](ConsoleApp/Program.cs#L50).
 
 ## [Завдання 3](ObserverLibrary)
 

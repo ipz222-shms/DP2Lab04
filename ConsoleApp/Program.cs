@@ -48,6 +48,30 @@ while (true)
             
             break;
         case Scenario.Mediator:
+            Runway[] runways =
+            [
+                new Runway(),
+                new Runway(),
+                new Runway(),
+                new Runway(),
+                new Runway()
+            ];
+            Aircraft[] aircrafts =
+            [
+                new Aircraft("A", 5),
+                new Aircraft("B", 12),
+                new Aircraft("C", 100),
+            ];
+            CommandCentre centre = new(runways, aircrafts);
+            
+            aircrafts[0].Land(runways[1]);
+            aircrafts[2].Land(runways[3]);
+            aircrafts[0].TakeOff(runways[2]);
+            aircrafts[1].Land(runways[4]);
+            aircrafts[2].TakeOff(runways[2]);
+            aircrafts[2].Land(runways[4]);
+            
+            break;
         case Scenario.Observer:
         case Scenario.Strategy:
         case Scenario.Memento:
