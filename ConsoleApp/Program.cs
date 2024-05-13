@@ -73,10 +73,10 @@ while (true)
             
             break;
         case Scenario.Observer:
-            LightElementNode div = new("div");
-            LightElementNode btn = new("button");
+            ObserverLibrary.LightElementNode div = new("div");
+            ObserverLibrary.LightElementNode btn = new("button");
             div.AppendChild(btn);
-            btn.AppendChild(new LightTextNode("Submit"));
+            btn.AppendChild(new ObserverLibrary.LightTextNode("Submit"));
             
             div.OnMouseOver += (node, _) => Console.WriteLine($"{node} Mouse Over!");
             div.OnMouseOut += (node, _) => Console.WriteLine($"{node} Mouse Out!");
@@ -90,6 +90,17 @@ while (true)
             
             break;
         case Scenario.Strategy:
+            StrategyLibrary.LightElementNode body = new("body");
+            LightImageNode img1 = new(@"https://picsum.photos/200", 
+                new StrategyLibrary.ImageLoaders.WebImageLoader());
+            LightImageNode img2 = new(@"D:\Development\source\repos\University\Course 2\Patterns\DP2Lab04\StrategyLibrary\Assets\984-200x200.jpg",
+                new StrategyLibrary.ImageLoaders.FileImageLoader());
+            body.AppendChild(img1);
+            body.AppendChild(img2);
+            
+            Console.WriteLine(body.OuterHTML());
+            
+            break;
         case Scenario.Memento:
         default:
             throw new NotImplementedException();
