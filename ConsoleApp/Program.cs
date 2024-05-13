@@ -102,6 +102,24 @@ while (true)
             
             break;
         case Scenario.Memento:
+            TextEditor doc = new();
+            
+            doc.WriteLine("Hello World!");
+            doc.Write("Hello");
+            doc.Write(" Country!");
+            Console.WriteLine($"{doc.ReadAll()}\n");
+
+            doc.Save();
+            
+            doc.Purge();
+            doc.WriteLine("Mykyta Shevtsov");
+            doc.WriteLine("IPZ-22-2 [2]");
+            Console.WriteLine(doc.ReadAll());
+            
+            doc.Restore();
+            Console.WriteLine(doc.ReadAll());
+            
+            break;
         default:
             throw new NotImplementedException();
     }
